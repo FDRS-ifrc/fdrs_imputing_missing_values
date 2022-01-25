@@ -7,9 +7,9 @@ import random as rnd
 import requests, json
 from pandas import json_normalize
 import json
-### 1. Get Data
+print ("1. Getting Data")
 from fdrsapi import api_function,baseline
-f = open("api_key.txt", "r")
+f = open("C:/Users/simon.weiss/OneDrive - IFRC/Tech talk and files/3_Python/FDRS/fdrs_imputing_missing_values/api_key.txt", "r")
 api_key=f.readline()
 #Selecting years to download
 years=["2017","2018","2019","2020"]
@@ -19,7 +19,7 @@ kpi_float=kpi_code.copy()
 kpi_float.remove("KPI_pr_sex")
 kpi_float.remove("KPI_sg_sex")
 time_series=api_function(years,kpi_code,kpi_float,api_key)
-### 2. Run imputing missing values
+print ("2. Running imputing missing values")
 from imp_function import imputing_mean,imputing_na
 # drop from 0 to 2011
 data_clean=time_series.query('KPI_Year >= 2012 & KPI_Year < 2021')
@@ -37,20 +37,21 @@ imputing_na(data_clean2_na_columns,selected_cols_2d)
 # concatenate the two sub_datasets
 fdrs_na_columns = [data_clean1, data_clean2_na_columns]
 fdrs_data_fdrs_na_columns = pd.concat(fdrs_na_columns)
-### 3. Post method - interact with Imp_Var
+print ("3. Posting to FDRS Database")
 #Selecting years to post
-years=[2017,2018,2019,2020]
-value=[]
-for kpi_don_code in list(set(fdrs_data_fdrs_na_columns["KPI_DON_code"])):
-    #for year in list(set(fdrs_data_fdrs_na_columns["KPI_Year"])):
+years=[2016,2017,2018,2019,2020]
+#Selecting indicators to impute
+kpi_code=["KPI_PeopleVol_Tot","KPI_PStaff_Tot","KPI_DonBlood_Tot","KPI_TrainFA_Tot","KPI_noLocalUnits","KPI_ReachDRER_CPD","KPI_ReachLTSPD_CPD","KPI_ReachDRR_CPD","KPI_ReachS_CPD","KPI_ReachL_CPD","KPI_ReachH_CPD","KPI_ReachWASH_CPD","KPI_ReachM_CPD","KPI_ReachCTP_CPD","KPI_ReachSI_CPD","KPI_IncomeLC_CHF","KPI_expenditureLC_CHF"]
+#fdrs_data_fdrs_na_columns_test.fillna(0,inplace=True)
+for kpi in list(kpi_code):
     for year in years:
-            for kpi in list(kpi_code):
-                value= (fdrs_data_fdrs_na_columns[kpi][(fdrs_data_fdrs_na_columns["KPI_Year"]==year)&(fdrs_data_fdrs_na_columns["KPI_DON_code"]==kpi_don_code)]).item()
+        for kpi_don_code in list(set(fdrs_data_fdrs_na_columns["KPI_DON_code"])): 
+            for label, content in (fdrs_data_fdrs_na_columns[kpi][(fdrs_data_fdrs_na_columns["KPI_Year"]==year)&(fdrs_data_fdrs_na_columns["KPI_DON_code"]==kpi_don_code)]).items():
+                value = content
                 if type(value)==float:
                     if not np.isnan(value):
                         value=np.int64(value)
                 kpi_post=kpi+"_IP"
                 url = (f"https://data-api-staging.ifrc.org/api/ImputedKPI?apiKey=21e401ae-6b35-404b-a72a-b74cce66dee3&kpicode={kpi_post}&year={year}&don_code={kpi_don_code}&value={value}&user=simon.weiss@ifrc.org")
-                print(url)
                 r = requests.post(url)
-                #print(r.text)
+                print(url,r.text)
