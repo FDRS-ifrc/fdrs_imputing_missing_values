@@ -77,7 +77,7 @@ years=[2016,2017,2018,2019,2020]
 f = open("api_key.txt", "r")
 api_key=f.readline()
 
-kpi_code=["KPI_PeopleVol_Tot","KPI_PStaff_Tot","KPI_DonBlood_Tot","KPI_TrainFA_Tot","KPI_noLocalUnits","KPI_ReachDRER_CPD","KPI_ReachLTSPD_CPD","KPI_ReachDRR_CPD","KPI_ReachS_CPD","KPI_ReachL_CPD","KPI_ReachH_CPD","KPI_ReachWASH_CPD","KPI_ReachM_CPD","KPI_ReachCTP_CPD","KPI_ReachSI_CPD","KPI_IncomeLC_CHF","KPI_expenditureLC_CHF"]
+kpi_code=["KPI_PeopleVol_Tot"]
 payload={}
 files={}
 headers = {}
