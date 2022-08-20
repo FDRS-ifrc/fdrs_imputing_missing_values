@@ -44,7 +44,7 @@ The core of this repository is the notebook 1.0-sw-imputing-notebook.
 This is to apply the method selected by the FDRS team and to interact with the FDRS backoffice with a post method to publish the imputed values. 
 The ingested data is replicated and displayed on the website https://data.ifrc.org/FDRS/ and used in FDRS research such as [Everyone count report](https://data-api.ifrc.org/documents/noiso/Everyone%20Counts%20Report%202022%20EN.pdf). 
 
-Therefore this is not a research notebook but a production notebook. It aims to simply expose the FDRS methodology of imputation step by step. A related python script has been created: [imputing.py]() which allows to launch this methodology once. 
+Therefore this is not a research notebook but a production notebook. It aims to simply expose the FDRS methodology of imputation step by step. A related python script has been created: [imp_function.py](https://github.com/FDRS-ifrc/fdrs_imputing_missing_values/blob/main/imp_function.py) which allows to launch this methodology once. 
 
 You can use [Jupyter Lab](https://jupyter.org/) to view and edit it:
 
