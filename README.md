@@ -20,12 +20,12 @@ The imputing applies only to main indicators and does not apply to disaggregated
 To get this repository, the best way is to have `git` and use `git clone`:
 
 ```bash
-git clone https://github.com/drivendataorg/flu-shot-learning-tutorial.git
+git clone https://github.com/FDRS-ifrc/fdrs_imputing_missing_values.git
 ```
 
 then to enter the project
 ```bash
-cd flu-shot-learning-tutorial
+cd fdrs_imputing_missing_values 
 ```
 ### Setting up the environment
 
@@ -34,8 +34,8 @@ This project requires Python 3.
 Virtual environments are important for creating reproducible analyses. One popular tool for managing Python and virtual environments is [`conda`](https://docs.conda.io/en/latest/miniconda.html). You can set up the environment for this project with `conda` using the commands below.
 
 ```bash
-conda create -n flu-shot-learning-tutorial python=3.7
-conda activate flu-shot-learning-tutorial
+conda create -n fdrs_imputing_missing_values python=3.8
+conda activate fdrs_imputing_missing_values
 pip install -r requirements.txt
 ```
 
