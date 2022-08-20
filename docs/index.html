@@ -18620,7 +18620,7 @@ number of KPI downloaded: 18
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18648,114 +18648,6 @@ number of KPI downloaded: 18
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>&lt;ipython-input-132-609b025abcae&gt;:7: FutureWarning: Automatic reindexing on DataFrame vs Series comparisons is deprecated and will raise ValueError in a future version.  Do `left, right = left.align(right, axis=1, copy=False)` before e.g. `left == right`
-  fdrs_data_fdrs_na_columns.loc[time_series_imputed[kpi_code_imp] == fdrs_data_fdrs_na_columns[kpi],kpi_code_binary]=0 #0 if same
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-132-609b025abcae&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      5</span> <span class="ansi-green-intense-fg ansi-bold">for</span> kpi <span class="ansi-green-intense-fg ansi-bold">in</span> list<span class="ansi-yellow-intense-fg ansi-bold">(</span>kpi_code<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">      6</span> 
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 7</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>fdrs_data_fdrs_na_columns<span class="ansi-yellow-intense-fg ansi-bold">.</span>loc<span class="ansi-yellow-intense-fg ansi-bold">[</span>time_series_imputed<span class="ansi-yellow-intense-fg ansi-bold">[</span>kpi_code_imp<span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">==</span> fdrs_data_fdrs_na_columns<span class="ansi-yellow-intense-fg ansi-bold">[</span>kpi<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span>kpi_code_binary<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">0</span> <span class="ansi-red-intense-fg ansi-bold">#0 if same</span>
-<span class="ansi-green-fg">      8</span>     fdrs_data_fdrs_na_columns<span class="ansi-yellow-intense-fg ansi-bold">.</span>loc<span class="ansi-yellow-intense-fg ansi-bold">[</span>time_series_imputed<span class="ansi-yellow-intense-fg ansi-bold">[</span>kpi_code_imp<span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">!=</span> fdrs_data_fdrs_na_columns<span class="ansi-yellow-intense-fg ansi-bold">[</span>kpi<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span>kpi_code_binary<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">1</span> <span class="ansi-red-intense-fg ansi-bold">#1 if different</span>
-<span class="ansi-green-fg">      9</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\indexing.py</span> in <span class="ansi-cyan-fg">__setitem__</span><span class="ansi-blue-intense-fg ansi-bold">(self, key, value)</span>
-<span class="ansi-green-fg">    686</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    687</span>             key <span class="ansi-yellow-intense-fg ansi-bold">=</span> com<span class="ansi-yellow-intense-fg ansi-bold">.</span>apply_if_callable<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">,</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>obj<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 688</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>indexer <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_get_setitem_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    689</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_has_valid_setitem_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    690</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\indexing.py</span> in <span class="ansi-cyan-fg">_get_setitem_indexer</span><span class="ansi-blue-intense-fg ansi-bold">(self, key)</span>
-<span class="ansi-green-fg">    628</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> isinstance<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">,</span> tuple<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    629</span>             <span class="ansi-green-intense-fg ansi-bold">with</span> suppress<span class="ansi-yellow-intense-fg ansi-bold">(</span>IndexingError<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 630</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span><span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_convert_tuple<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">,</span> is_setter<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">True</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    631</span> 
-<span class="ansi-green-fg">    632</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> isinstance<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">,</span> range<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\indexing.py</span> in <span class="ansi-cyan-fg">_convert_tuple</span><span class="ansi-blue-intense-fg ansi-bold">(self, key, is_setter)</span>
-<span class="ansi-green-fg">    752</span>             self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_validate_key_length<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    753</span>             <span class="ansi-green-intense-fg ansi-bold">for</span> i<span class="ansi-yellow-intense-fg ansi-bold">,</span> k <span class="ansi-green-intense-fg ansi-bold">in</span> enumerate<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 754</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span>idx <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_convert_to_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span>k<span class="ansi-yellow-intense-fg ansi-bold">,</span> axis<span class="ansi-yellow-intense-fg ansi-bold">=</span>i<span class="ansi-yellow-intense-fg ansi-bold">,</span> is_setter<span class="ansi-yellow-intense-fg ansi-bold">=</span>is_setter<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    755</span>                 keyidx<span class="ansi-yellow-intense-fg ansi-bold">.</span>append<span class="ansi-yellow-intense-fg ansi-bold">(</span>idx<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    756</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\indexing.py</span> in <span class="ansi-cyan-fg">_convert_to_indexer</span><span class="ansi-blue-intense-fg ansi-bold">(self, key, axis, is_setter)</span>
-<span class="ansi-green-fg">   1210</span>             <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1211</span>                 <span class="ansi-red-intense-fg ansi-bold"># When setting, missing keys are not allowed, even with .loc:</span>
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1212</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span><span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_get_listlike_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">,</span> axis<span class="ansi-yellow-intense-fg ansi-bold">,</span> raise_missing<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">True</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">   1213</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1214</span>             <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\indexing.py</span> in <span class="ansi-cyan-fg">_get_listlike_indexer</span><span class="ansi-blue-intense-fg ansi-bold">(self, key, axis, raise_missing)</span>
-<span class="ansi-green-fg">   1252</span>         <span class="ansi-red-intense-fg ansi-bold"># Have the index compute an indexer or return None</span>
-<span class="ansi-green-fg">   1253</span>         <span class="ansi-red-intense-fg ansi-bold"># if it cannot handle:</span>
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1254</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>indexer<span class="ansi-yellow-intense-fg ansi-bold">,</span> keyarr <span class="ansi-yellow-intense-fg ansi-bold">=</span> ax<span class="ansi-yellow-intense-fg ansi-bold">.</span>_convert_listlike_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">   1255</span>         <span class="ansi-red-intense-fg ansi-bold"># We only act on all found values:</span>
-<span class="ansi-green-fg">   1256</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> indexer <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">not</span> <span class="ansi-green-intense-fg ansi-bold">None</span> <span class="ansi-green-intense-fg ansi-bold">and</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>indexer <span class="ansi-yellow-intense-fg ansi-bold">!=</span> <span class="ansi-yellow-intense-fg ansi-bold">-</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>all<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\indexes\base.py</span> in <span class="ansi-cyan-fg">_convert_listlike_indexer</span><span class="ansi-blue-intense-fg ansi-bold">(self, keyarr)</span>
-<span class="ansi-green-fg">   3409</span>             <span class="ansi-green-intense-fg ansi-bold">pass</span>
-<span class="ansi-green-fg">   3410</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 3411</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>keyarr <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_convert_arr_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span>keyarr<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">   3412</span> 
-<span class="ansi-green-fg">   3413</span>         indexer <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_convert_list_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span>keyarr<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\indexes\base.py</span> in <span class="ansi-cyan-fg">_convert_arr_indexer</span><span class="ansi-blue-intense-fg ansi-bold">(self, keyarr)</span>
-<span class="ansi-green-fg">   3427</span>         converted_keyarr <span class="ansi-yellow-intense-fg ansi-bold">:</span> array<span class="ansi-yellow-intense-fg ansi-bold">-</span>like
-<span class="ansi-green-fg">   3428</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 3429</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>keyarr <span class="ansi-yellow-intense-fg ansi-bold">=</span> com<span class="ansi-yellow-intense-fg ansi-bold">.</span>asarray_tuplesafe<span class="ansi-yellow-intense-fg ansi-bold">(</span>keyarr<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">   3430</span>         <span class="ansi-green-intense-fg ansi-bold">return</span> keyarr
-<span class="ansi-green-fg">   3431</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\common.py</span> in <span class="ansi-cyan-fg">asarray_tuplesafe</span><span class="ansi-blue-intense-fg ansi-bold">(values, dtype)</span>
-<span class="ansi-green-fg">    213</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> result<span class="ansi-yellow-intense-fg ansi-bold">.</span>ndim <span class="ansi-yellow-intense-fg ansi-bold">==</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    214</span>         <span class="ansi-red-intense-fg ansi-bold"># Avoid building an array of arrays:</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 215</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>values <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span>tuple<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">for</span> x <span class="ansi-green-intense-fg ansi-bold">in</span> values<span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">    216</span>         result <span class="ansi-yellow-intense-fg ansi-bold">=</span> construct_1d_object_array_from_listlike<span class="ansi-yellow-intense-fg ansi-bold">(</span>values<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    217</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\simon.weiss\Anaconda3\lib\site-packages\pandas\core\common.py</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-intense-fg ansi-bold">(.0)</span>
-<span class="ansi-green-fg">    213</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> result<span class="ansi-yellow-intense-fg ansi-bold">.</span>ndim <span class="ansi-yellow-intense-fg ansi-bold">==</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    214</span>         <span class="ansi-red-intense-fg ansi-bold"># Avoid building an array of arrays:</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 215</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>values <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span>tuple<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">for</span> x <span class="ansi-green-intense-fg ansi-bold">in</span> values<span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">    216</span>         result <span class="ansi-yellow-intense-fg ansi-bold">=</span> construct_1d_object_array_from_listlike<span class="ansi-yellow-intense-fg ansi-bold">(</span>values<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    217</span> 
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;int&#39; object is not iterable</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
