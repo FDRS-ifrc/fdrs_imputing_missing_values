@@ -11,7 +11,7 @@ The ingested data is  replicated and displayed on the website https://data.ifrc.
 
 The approach chosen was to replace the 2019, 2020 and 2021 missing data as well as to apply two different techniques according to the indicator categories, in the previous years all NSs reported their data then no input technique was employed.   
 
-The imputing applies only to main indicators and does not apply to disaggregated levels to maintain consistency across years. A detailed description of the methodology is available in the pdf [Missing Data]()
+The imputing applies only to main indicators and does not apply to disaggregated levels to maintain consistency across years. A detailed description of the methodology is available in the pdf [Missing Data](https://github.com/FDRS-ifrc/fdrs_imputing_missing_values/blob/main/references/Missing%20Data.pdf)
 
 ## Setting up
 
