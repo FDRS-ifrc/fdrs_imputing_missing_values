@@ -29,13 +29,13 @@ If a value is missing for a year between 2019 and 2020, but there is at least on
 
 ### Examples
 
-| Example: Indicator for number of local units, Nolandia National Society 	                        | 2018    	| 2019    	| 2020    	|
+| Example: Number of local units, Nolandia National Society 	                                    | 2018    	| 2019    	| 2020    	|
 |-----------------------------------------------------------------------------------------------	|---------	|---------	|---------	|
 | Local Units                                                                                    	| 150    	| Missing 	| Missing 	|
 | Missing value is replaced like this                                                           	| 2018    	| 2019    	| 2020    	|
 | Local Units                                                                                    	| 150    	| 150   	| 150    	|
 
-| Example: Indicator for number of people reached by WASH activities, Nolandia National Society 	| 2018    	| 2019    	| 2020    	|
+| Example: People reached by WASH activities, Nolandia National Society 	                        | 2018    	| 2019    	| 2020    	|
 |-----------------------------------------------------------------------------------------------	|---------	|---------	|---------	|
 | People Reached by WASH activities                                                             	| 200,000 	| 500,000 	| Missing 	|
 | Missing value is replaced like this                                                           	| 2018    	| 2019    	| 2020    	|
