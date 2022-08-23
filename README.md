@@ -108,7 +108,7 @@ jupyter lab
     │   │   └── public_api_key.txt <- Public  API key
             └── api_key.txt        <- Private API key (hidden)
 
-*Last update: 20.08.2022*  
+*Last update: 23.08.2022*  
 *Contact : fdrs@ifrc.org or simon.weiss@ifrc.org*  
 *FDRS focal point: Simon Weiss, FDRS Data Analyst*    
 
