@@ -14,18 +14,18 @@ The approach chosen was to replace the 2019, 2020 and 2021 missing data as well 
 The imputing applies only to main indicators and does not apply to disaggregated levels to maintain consistency across years. A detailed description of the FDRS indicators is available in the excel [codebook](https://github.com/FDRS-ifrc/fdrs_imputing_missing_values/blob/main/references/codebook.xlsx). Naming convention: Imputed variables have the suffix "_IP". 
 
 ## Description of the methodology
-For every combination of one National Society and one main indicator of FDRS sections NS Governance & Structure and NS Finance & Partnerships:
+For every combination of one National Society and one main indicator of FDRS sections NS Governance & Structure and NS Finance & Partnerships:  
 If a value is missing for a year between 2019 and 2020, but there is at least one non-missing value in a later or an earlier year from 2018, replace the missing value:
-```
+
 - Looking at the years before this one, propagate last non-missing observation forward to next observation.
 - If all the values for every year between 2019 and 2020 are missing, ignore this National Society for this indicator.
-```
-For every combination of one National Society and one main indicator of FDRS section NS Reach:
+
+For every combination of one National Society and one main indicator of FDRS section NS Reach:  
 If a value is missing for a year between 2019 and 2020, but there is at least one non-missing value in a later or an earlier year from 2018, replace the missing value:
-```
+
 - Looking at the years before this one, returns the mean of the non-missing values among these previous years.
 - If all the values for every year between 2019 and 2020 are missing, ignore this National Society for this indicator.
-```
+
 
 ### Examples
 
