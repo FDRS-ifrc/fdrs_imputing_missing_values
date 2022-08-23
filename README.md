@@ -29,7 +29,7 @@ If a value is missing for a year between 2019 and 2020, but there is at least on
 
 ### Examples
 
-| Example: Number of local units, Nolandia National Society 	                                    | 2018    	| 2019    	| 2020    	|
+| Example: Number of local units, Nolandia National Society   	                                    | 2018    	| 2019    	| 2020    	|
 |-----------------------------------------------------------------------------------------------	|---------	|---------	|---------	|
 | Local Units                                                                                    	| 150    	| Missing 	| Missing 	|
 | Missing value is replaced like this                                                           	| 2018    	| 2019    	| 2020    	|
