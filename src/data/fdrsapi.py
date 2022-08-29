@@ -63,7 +63,7 @@ def api_function_imputed(years,kpi_code,kpi_float,api_key):
     for kpi_codes in kpi_code:
     # df_final_2.merge(df_baseline_2[["KPI ID","value"]],on=["KPI ID"],how="outer")
         for year in years:
-            results = requests.get(f"https://data-api-staging.ifrc.org/api/KpiImputedValue?kpicode={kpi_codes}&year={year}&apiKey={api_key}&showunpublished=true").json()
+            results = requests.get(f"https://data-api.ifrc.org/api/KpiImputedValue?kpicode={kpi_codes}&year={year}&apiKey={api_key}&showunpublished=true").json()
             df_temp_2 = json_normalize(data=results)
             df_temp_2["KPI_Year"] = year
             df_temp_2["KPI_Code"]=kpi_codes
