@@ -7,7 +7,7 @@ This repository centralizes the imputation methodology used by the Federation-wi
 The FDRS is ambitious and wide reaching. Although the data quality and reporting are improving each year, data is missing for some National Societies. As a result, some data fluctuations may be misleading: trend lines can drop for a given year when there is missing data, and some National Societies are excluded from the total and then appear again in another year.In order to better represent the network and better count everyone, FDRS implement every year data imputation techniques. 
 
 The purpose of this notebook is to apply the method selected by the FDRS team and to interact with the FDRS backoffice with a post method to publish the imputed values. 
-The ingested data is  replicated and displayed on the website https://data.ifrc.org/FDRS/ and used in FDRS research such as [Everyone count report](https://data-api.ifrc.org/documents/noiso/Everyone%20Counts%20Report%202022%20EN.pdf). 
+The ingested data is  replicated and displayed on the website https://data.ifrc.org/FDRS/ and used in FDRS research such as [Everyone count report](https://data-api.ifrc.org/documents/noiso/Everyone%20Counts%20Report%202022%20EN.pdf). The imputation of the data is planned to be launched at the beginning of each month, the 1st. 
 
 The approach chosen was to replace the 2019, 2020 and 2021 missing data as well as to apply two different techniques according to the indicator categories, in the previous years all NSs reported their data then no input technique was employed.   
 
@@ -108,6 +108,7 @@ jupyter lab
     │   │   └── public_api_key.txt <- Public  API key
             └── api_key.txt        <- Private API key (hidden)
 
+*Update frequency : every month*
 *Last update: 23.08.2022*  
 *Contact : fdrs@ifrc.org or simon.weiss@ifrc.org*  
 *FDRS focal point: Simon Weiss, FDRS Data Analyst*    
