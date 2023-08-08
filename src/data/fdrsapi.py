@@ -15,8 +15,8 @@ def baseline(years_selected,key):
     for year in years_selected:
         print(year)
         df_code["KPI_Year"]=year
-        df_baseline=df_baseline.append(df_code)
-        df_final=df_final.append(df_baseline)
+        df_baseline=df_baseline._append(df_code)
+        df_final=df_final._append(df_baseline)
     df_baseline["KPI ID"]=df_baseline["KPI_DON_code"]+df_baseline["KPI_Year"]
     df_final["KPI ID"]=df_final["KPI_DON_code"]+df_final["KPI_Year"]
     return df_baseline
@@ -36,7 +36,7 @@ def api_function(years,kpi_code,kpi_float,api_key):
             df_temp = json_normalize(data=results)
             df_temp["KPI_Year"] = year
             df_temp["KPI_Code"]=kpi_codes
-            df=df.append(df_temp,ignore_index=True)
+            df=df._append(df_temp,ignore_index=True)
             df["KPI ID"]=df["doncode"]+df["KPI_Year"]
     df_final=df_baseline.merge(df[["KPI ID","value","KPI_Code"]],on=["KPI ID"],how="outer")
     df_baseline.set_index("KPI ID",inplace=True)
@@ -67,7 +67,7 @@ def api_function_imputed(years,kpi_code,kpi_float,api_key):
             df_temp_2 = json_normalize(data=results)
             df_temp_2["KPI_Year"] = year
             df_temp_2["KPI_Code"]=kpi_codes
-            df_2=df_2.append(df_temp_2,ignore_index=True)
+            df_2=df_2._append(df_temp_2,ignore_index=True)
             df_2["KPI ID"]=df_2["doncode"]+df_2["KPI_Year"]
     df_final_2=df_baseline_2.merge(df_2[["KPI ID","value","KPI_Code"]],on=["KPI ID"],how="outer")
     df_baseline_2.set_index("KPI ID",inplace=True)
