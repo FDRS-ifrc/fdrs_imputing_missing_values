@@ -1,5 +1,6 @@
-#Exclude API Post Key
+#Exclude API Keys and Configurations
 /src/config/api_key.txt
+/src/config/config_*.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
