@@ -16,7 +16,7 @@ The imputing applies only to main indicators and does not apply to disaggregated
 For every combination of one National Society and one main indicator of the FDRS section NS Governance & Structure:  
 - Take the saved or submitted value, if available.
 
-<br>
+
 
 If a value has not been published for a year a given year:
 - Take the saved or submitted value of the previous year, if available.
@@ -26,7 +26,7 @@ If a value has not been published for a year a given year:
 For every combination of one National Society and one main indicator of the FDRS section NS Finance & Partnerships:
 - Take the saved or submitted value, if available.
 
-<br>
+
 
 If the National Society has not submitted any FDRS section and if a value has not been published for a year a given year:
 - Take the saved or submitted value of the previous year, if available.
@@ -36,7 +36,7 @@ If the National Society has not submitted any FDRS section and if a value has no
 For every combination of one National Society and one main indicator of the FDRS section NS Reach:  
 - Take the saved or submitted value, if available.
 
-<br>
+
 
 If the National Society has not submitted any FDRS section and if a value has not been published for a year a given year:
 - Take the average of the saved and/or submitted values of the past three years.
