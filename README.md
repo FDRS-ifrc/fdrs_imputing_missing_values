@@ -15,8 +15,8 @@ The imputing applies only to main indicators and does not apply to disaggregated
 ## Description of the methodology
 For every combination of one National Society and one main indicator of the FDRS section NS Governance & Structure:  
 - Take the saved or submitted value, if available.
-&nbsp;
-&nbsp;
+
+<br>
 
 If a value has not been published for a year a given year:
 - Take the saved or submitted value of the previous year, if available.
