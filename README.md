@@ -19,11 +19,13 @@ For every combination of one National Society and one main indicator of the FDRS
 If a value has not been published for a year a given year:
 - Take the saved or submitted value of the previous year, if available.
 
+
 For every combination of one National Society and one main indicator of the FDRS section NS Finance & Partnerships:
 - Take the saved or submitted value, if available.
 
 If the National Society has not submitted any FDRS section and if a value has not been published for a year a given year:
 - Take the saved or submitted value of the previous year, if available.
+
 
 For every combination of one National Society and one main indicator of the FDRS section NS Reach:  
 - Take the saved or submitted value, if available.
