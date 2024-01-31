@@ -4,27 +4,32 @@
 
 This repository centralizes the imputation methodology used by the Federation-wide databank and reporting system (FDRS) team to address missing data. [FDRS](https://data.ifrc.org/FDRS/) is an IFRC platform dedicated to providing insights on the Red Cross Red Crescent National Societies. The data is gathered through a yearly data collection from 192 National Societies. 
 
-The FDRS is ambitious and wide reaching. Although the data quality and reporting are improving each year, data is missing for some National Societies. As a result, some data fluctuations may be misleading: trend lines can drop for a given year when there is missing data, and some National Societies are excluded from the total and then appear again in another year.In order to better represent the network and better count everyone, FDRS implement every year data imputation techniques. 
+The FDRS is ambitious and wide reaching. Although the data quality and reporting are improving each year, data is missing for some National Societies. As a result, some data fluctuations may be misleading: trend lines can drop for a given year when there is missing data, and some National Societies are excluded from the total and then appear again in another year. In order to better represent the network and better count everyone, FDRS implement data imputation techniques. 
 
 The purpose of this notebook is to apply the method selected by the FDRS team and to interact with the FDRS backoffice with a post method to publish the imputed values. 
-The ingested data is  replicated and displayed on the website https://data.ifrc.org/FDRS/ and used in FDRS research such as [Everyone count report](https://data-api.ifrc.org/documents/noiso/Everyone%20Counts%20Report%202022%20EN.pdf). The imputation of the data is planned to be launched at the beginning of each month, the 1st. 
-
-The approach chosen was to replace the 2019, 2020 and 2021 missing data as well as to apply two different techniques according to the indicator categories, in the previous years all NSs reported their data then no input technique was employed.   
+The ingested data is replicated and displayed on the website https://data.ifrc.org/FDRS/ and used in FDRS research such as [Everyone count report](https://data-api.ifrc.org/documents/noiso/Everyone%20Counts%20Report%202022%20EN.pdf). The imputation of the data is planned to be launched together with the first publication of a given year, and is recalculated on a weekly basis.
+The approach chosen was to replace missing data from 2019 and onwards, depending on two different techniques according to the indicator categories.  
 
 The imputing applies only to main indicators and does not apply to disaggregated levels to maintain consistency across years. A detailed description of the FDRS indicators is available in the excel [codebook](https://github.com/FDRS-ifrc/fdrs_imputing_missing_values/blob/main/references/codebook.xlsx). Naming convention: Imputed variables have the suffix "_IP". 
 
 ## Description of the methodology
-For every combination of one National Society and one main indicator of FDRS sections NS Governance & Structure and NS Finance & Partnerships:  
-If a value is missing for a year between 2019 and 2020, but there is at least one non-missing value in a later or an earlier year from 2018, replace the missing value:
+For every combination of one National Society and one main indicator of the FDRS section NS Governance & Structure:  
+- Take the saved or submitted value, if available.
 
-- Looking at the years before this one, propagate last non-missing observation forward to next observation.
-- If all the values for every year between 2019 and 2020 are missing, ignore this National Society for this indicator.
+If a value has not been published for a year a given year:
+- Take the saved or submitted value of the previous year, if available.
 
-For every combination of one National Society and one main indicator of FDRS section NS Reach:  
-If a value is missing for a year between 2019 and 2020, but there is at least one non-missing value in a later or an earlier year from 2018, replace the missing value:
+For every combination of one National Society and one main indicator of the FDRS section NS Finance & Partnerships:
+- Take the saved or submitted value, if available.
 
-- Looking at the years before this one, returns the mean of the non-missing values among these previous years.
-- If all the values for every year between 2019 and 2020 are missing, ignore this National Society for this indicator.
+If the National Society has not submitted any FDRS section and if a value has not been published for a year a given year:
+- Take the saved or submitted value of the previous year, if available.
+
+For every combination of one National Society and one main indicator of the FDRS section NS Reach:  
+- Take the saved or submitted value, if available.
+
+If the National Society has not submitted any FDRS section and if a value has not been published for a year a given year:
+- Take the average of the saved and/or submitted values of the past three years.
 
 
 ### Examples
