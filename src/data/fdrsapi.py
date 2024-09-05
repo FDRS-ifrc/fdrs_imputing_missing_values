@@ -53,5 +53,7 @@ def api_function(years, kpi_code, config):
 
 def api_function_imputed(years, kpi_code, config):
     df_data = fetch_data(years, kpi_code, config, 'KpiImputedValue')
+    if len(df_data)==0:
+        df_data=fetch_data(["2022"], kpi_code, config, 'KpiImputedValue')
     df_baseline = baseline(years, config)
     return pivot_data(df_data, df_baseline)
