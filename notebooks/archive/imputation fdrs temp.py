@@ -398,50 +398,30 @@ def replacement(doncode,kpicode,value):
     print("Replaced "+str(imputed_data_prepared.loc[imputed_data_prepared["KPI_DON_code"]==doncode,[kpicode]])+" with "+str(value)+", difference = "+str(value-imputed_data_prepared.loc[imputed_data_prepared["KPI_DON_code"]==doncode,[kpicode]]))
     imputed_data_prepared.loc[imputed_data_prepared["KPI_DON_code"]==doncode,[kpicode]]=value
 
-#Huge indirect number
-#nigeria
-replacement("DNG001","KPI_ReachHI_CPD",3818660)
-replacement("DNG001","KPI_ReachH_CPD",8667395)
-#burundi
-replacement("DBI001","KPI_ReachCTP_CPD",61396)
-replacement("DBI001","KPI_ReachDRER_CPD", 275642)
-replacement("DBI001","KPI_ReachDRR_CPD", 1470471)
-replacement("DBI001","KPI_ReachH_CPD",4102199)
-replacement("DBI001","KPI_ReachHI_CPD", 20098)
-replacement("DBI001","KPI_ReachL_CPD",361202)
-replacement("DBI001","KPI_ReachLTSPD_CPD", 718246)
-replacement("DBI001","KPI_ReachM_CPD",65186)
-replacement("DBI001","KPI_ReachSI_CPD", 324289)
-replacement("DBI001","KPI_ReachHPM_CPD", 215345)
+#replacements
+replacement("DBI001","KPI_ReachDRER_CPD", 646322)
+replacement("DBI001","KPI_ReachLTSPD_CPD", 125437)
+replacement("DBI001","KPI_ReachDRR_CPD", 403110)
+replacement("DBI001","KPI_ReachS_CPD",22640)
+replacement("DBI001","KPI_ReachL_CPD",125437)
+replacement("DBI001","KPI_ReachH_CPD",4720429)
+replacement("DBI001","KPI_ReachHPM_CPD", 71890)
+replacement("DBI001","KPI_ReachHI_CPD", 7410)
+replacement("DBI001","KPI_ReachWASH_CPD", 550362)
+replacement("DBI001","KPI_ReachM_CPD",73365)
+replacement("DBI001","KPI_ReachCTP_CPD",95135)
+replacement("DBI001","KPI_ReachSI_CPD", 244788)
 replacement("DBI001","KPI_ReachRCRCEd_CPD",math.nan)
-replacement("DBI001","KPI_ReachS_CPD",31605)
-replacement("DBI001","KPI_ReachWASH_CPD", 1226020)
 
-#Income/Expenditure way to low
-#japan
-replacement("DJP001","KPI_IncomeLC_CHF",10323894987)
-replacement("DJP001","KPI_expenditureLC_CHF",9761975790)
-#Dominican RC
-replacement("DDO001","KPI_IncomeLC_CHF",17315647)
-replacement("DDO001","KPI_expenditureLC_CHF",15369162)
-#The Republic of Korea National Red Cross
-replacement("DKR001","KPI_IncomeLC_CHF",576961175)
-replacement("DKR001","KPI_expenditureLC_CHF",548106034)
-
-
-#Last year, did not provide the service  / did not report
-replacement("DCN001","KPI_DonBlood_Tot",math.nan)
-replacement("DET001","KPI_ReachDRER_CPD",math.nan)
-replacement("DET001","KPI_Climate_CPD",math.nan)
-
-#Only huge indirect number
-replacement("DSY001","KPI_ClimateHeat_CPD",41203)
-
-#Volunteers
-replacement("DIR001","KPI_PeopleVol_Tot", 1666480)
+#replacement("DIR001","KPI_PeopleVol_Tot", 1666480)
 replacement("DIN001","KPI_PeopleVol_Tot", 4010811)
-#replacement("DUG001","KPI_PeopleVol_Tot", 2980)
-replacement("DCD001","KPI_PeopleVol_Tot", 209000)
+replacement("DNG001","KPI_PeopleVol_Tot", 67000)
+
+replacement("DTZ001","KPI_ReachHI_CPD",5400000)
+replacement("DDZ001","KPI_ReachDRR_CPD",700000)
+
+
+
 
 # %%
 #Only post differences, so lets find where those differences are :)
@@ -534,7 +514,7 @@ joined['sum'] = joined['total_y'] - joined['total_x']
 joined['perc']= (joined['total_y'] - joined['total_x'])/joined['total_x']*100
 print(joined[['sum','perc']])
 
-print(pd.DataFrame([x for x in imputed_values if x[1]=="KPI_ClimateHeat_CPD_IP" and not ((x[2]=='' or x[2]==0 or math.isnan(x[2])) and (x[3]=="" or x[3]==0 or math.isnan(x[3])))],columns=["DON","KPI","Imputed","Current","Diff","Previous"]))
+print(pd.DataFrame([x for x in imputed_values if x[1]=="KPI_ReachM_CPD_IP" and not ((x[2]=='' or x[2]==0 or math.isnan(x[2])) and (x[3]=="" or x[3]==0 or math.isnan(x[3])))],columns=["DON","KPI","Imputed","Current","Diff","Previous"]))
 #[x for x in current_values if x[1]=="KPI_ReachCTP_CPD_IP"]
 
 # %%
